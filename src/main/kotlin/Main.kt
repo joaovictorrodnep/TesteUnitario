@@ -11,8 +11,15 @@ d. Caso todos os critérios sejam satisfeitos, exibir “Welcome :)”.
 */
 
 fun main() {
-
+    println("asdas")
 }
+
 fun isValidAge(age: Int): Boolean {
     return age in 18..200
+}
+
+fun isValidInviteType(type: String): Boolean {
+    val types: ArrayList<String> = arrayListOf("comum", "premium", "luxo")
+    return types.contains(type)
+
 }
