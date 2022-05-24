@@ -10,9 +10,9 @@ inválido.”.
 d. Caso todos os critérios sejam satisfeitos, exibir “Welcome :)”.
 */
 
-
-
-
 fun main() {
 
+}
+fun isValidAge(age: Int): Boolean {
+    return age in 18..200
 }
