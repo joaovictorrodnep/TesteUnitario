@@ -1,8 +1,13 @@
 import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.Test
 
-//b. Peça o tipo de convite. Os tipos de convite são comum, premium e luxo. Negar a entrada caso não
-//seja nenhum destes. Mensagem: “Negado. Convite inválido.”.
+/*
+c. Peça o código do convite. Convites premium e luxo começam com “XL”. Convites comuns começam
+com “XT”. Caso o código não esteja nos padrões, negar a entrada. Mensagem: “Negado. Convite
+inválido.”.
+ */
+
+
 
 class MainTest {
 
@@ -27,8 +32,23 @@ class MainTest {
             { Assertions.assertFalse(isValidInviteType("abc")) },
             { Assertions.assertFalse(isValidInviteType("")) },
 
-        )
+            )
     }
 
+    @Test
+    fun testInviteCode() {
+
+        Assertions.assertAll(
+            { Assertions.assertTrue(isValidInviteCode("XL5646")) },
+            { Assertions.assertTrue(isValidInviteCode("XT87456")) },
+            { Assertions.assertTrue(isValidInviteCode("XL #~!")) },
+            { Assertions.assertFalse(isValidInviteCode("37XL#~!")) },
+            { Assertions.assertFalse(isValidInviteCode("8974651!XT")) },
+            { Assertions.assertFalse(isValidInviteCode("")) },
+
+        )
+
+
+    }
 
 }

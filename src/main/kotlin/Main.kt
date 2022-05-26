@@ -23,3 +23,13 @@ fun isValidInviteType(type: String): Boolean {
     return types.contains(type)
 
 }
+
+fun isValidInviteCode(code: String): Boolean {
+    val codesPrefix: ArrayList<String> = arrayListOf("XL", "XT")
+    for (codePrefix in codesPrefix) {
+        if (code.startsWith(codePrefix)) {
+            return true
+        }
+    }
+    return false
+}
