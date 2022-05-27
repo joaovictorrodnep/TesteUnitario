@@ -10,11 +10,11 @@ inválido.”.
 d. Caso todos os critérios sejam satisfeitos, exibir “Welcome :)”.
 */
 
-fun main() {
-    val message = getMessage(20, "comum", "XL213214")
-    print(message)
-
-}
+//fun main() {
+//    val message = getMessage(20, "comum", "XL213214")
+//    print(message)
+//
+//}
 
 fun isValidAge(age: Int): Boolean {
     return age in 18..200

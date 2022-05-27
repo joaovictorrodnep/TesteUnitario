@@ -5,13 +5,6 @@ import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.fail
 import kotlin.test.fail
 
-/*
-c. Peça o código do convite. Convites premium e luxo começam com “XL”. Convites comuns começam
-com “XT”. Caso o código não esteja nos padrões, negar a entrada. Mensagem: “Negado. Convite
-inválido.”.
- */
-
-
 
 class MainTest {
 
