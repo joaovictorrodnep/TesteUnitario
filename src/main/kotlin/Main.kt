@@ -11,7 +11,9 @@ d. Caso todos os critérios sejam satisfeitos, exibir “Welcome :)”.
 */
 
 fun main() {
-    println("asdas")
+    val message = getMessage(20, "comum", "XL213214")
+    print(message)
+
 }
 
 fun isValidAge(age: Int): Boolean {
@@ -20,11 +22,14 @@ fun isValidAge(age: Int): Boolean {
 
 fun isValidInviteType(type: String): Boolean {
     val types: ArrayList<String> = arrayListOf("comum", "premium", "luxo")
-    return types.contains(type)
+    return types.contains(type.lowercase())
 
 }
 
 fun isValidInviteCode(code: String): Boolean {
+    if (code.contains(" ")) {
+        return false
+    }
     val codesPrefix: ArrayList<String> = arrayListOf("XL", "XT")
     for (codePrefix in codesPrefix) {
         if (code.startsWith(codePrefix)) {
@@ -32,4 +37,11 @@ fun isValidInviteCode(code: String): Boolean {
         }
     }
     return false
+}
+
+fun getMessage(age: Int, type: String, code: String): String {
+    if (isValidAge(age) && isValidInviteType(type) && isValidInviteCode(code)) {
+        return "Bem Vindo"
+    }
+    return "Acesso Negado"
 }
